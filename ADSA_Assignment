@@ -1,0 +1,37 @@
+class node:
+  def __init__(self,name,age,patient_id):
+
+      self.name = name
+      self.age = age
+      self.patient_id = patient_id
+      self.next = None
+
+
+
+class patientLinkedlist:
+  def __init__(self):
+    self.head = None
+    self.tail = None
+
+  #insert at end
+  def insert_patient(self,name,age,patient_id):
+    new_node=node(name,age,patient_id)
+    if self.head is None:
+      self.head = new_node
+      self.tail = new_node
+
+
+L = patientLinkedlist()
+n1 = node("adhira",30,109)
+L.head= n1 # head paoint to first node
+L.tail= n1
+
+
+
+print(L.head.name)
+print(L.head.age)
+print(L.head.patient_id)
+     
+alice
+30
+109
